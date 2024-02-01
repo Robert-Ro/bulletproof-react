@@ -1,13 +1,13 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import logo from '@/assets/logo.svg';
-import { Link } from '@/components/Elements';
-import { Head } from '@/components/Head';
+import logo from '@/assets/logo.svg'
+import { Link } from '@/components/Elements'
+import { Head } from '@/components/Head'
 
 type LayoutProps = {
-  children: React.ReactNode;
-  title: string;
-};
+  children: React.ReactNode
+  title: string
+}
 
 export const Layout = ({ children, title }: LayoutProps) => {
   return (
@@ -29,5 +29,5 @@ export const Layout = ({ children, title }: LayoutProps) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}

@@ -48,3 +48,7 @@ Contributions are always welcome! If you have any ideas, suggestions, fixes, fee
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## TODO
+
+- test router jump, 已鉴权后跳/login 怎么处理的

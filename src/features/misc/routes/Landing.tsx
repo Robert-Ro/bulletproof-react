@@ -1,21 +1,21 @@
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom'
 
-import logo from '@/assets/logo.svg';
-import { Button } from '@/components/Elements';
-import { Head } from '@/components/Head';
-import { useAuth } from '@/lib/auth';
+import logo from '@/assets/logo.svg'
+import { Button } from '@/components/Elements'
+import { Head } from '@/components/Head'
+import { useAuth } from '@/lib/auth'
 
 export const Landing = () => {
-  const navigate = useNavigate();
-  const { user } = useAuth();
+  const navigate = useNavigate()
+  const { user } = useAuth()
 
   const handleStart = () => {
     if (user) {
-      navigate('/app');
+      navigate('/app')
     } else {
-      navigate('/auth/login');
+      navigate('/auth/login')
     }
-  };
+  }
 
   return (
     <>
@@ -77,5 +77,5 @@ export const Landing = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
