@@ -1,29 +1,29 @@
-import { Transition } from '@headlessui/react';
+import { Transition } from '@headlessui/react'
 import {
   CheckCircleIcon,
   ExclamationCircleIcon,
   XCircleIcon,
   InformationCircleIcon,
-} from '@heroicons/react/outline';
-import { XIcon } from '@heroicons/react/solid';
-import { Fragment } from 'react';
+  XMarkIcon,
+} from '@heroicons/react/24/outline'
+import { Fragment } from 'react'
 
 const icons = {
   info: <InformationCircleIcon className="h-6 w-6 text-blue-500" aria-hidden="true" />,
   success: <CheckCircleIcon className="h-6 w-6 text-green-500" aria-hidden="true" />,
   warning: <ExclamationCircleIcon className="h-6 w-6 text-yellow-500" aria-hidden="true" />,
   error: <XCircleIcon className="h-6 w-6 text-red-500" aria-hidden="true" />,
-};
+}
 
 export type NotificationProps = {
   notification: {
-    id: string;
-    type: keyof typeof icons;
-    title: string;
-    message?: string;
-  };
-  onDismiss: (id: string) => void;
-};
+    id: string
+    type: keyof typeof icons
+    title: string
+    message?: string
+  }
+  onDismiss: (id: string) => void
+}
 
 export const Notification = ({
   notification: { id, type, title, message },
@@ -53,11 +53,11 @@ export const Notification = ({
                 <button
                   className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   onClick={() => {
-                    onDismiss(id);
+                    onDismiss(id)
                   }}
                 >
                   <span className="sr-only">Close</span>
-                  <XIcon className="h-5 w-5" aria-hidden="true" />
+                  <XMarkIcon className="h-5 w-5" aria-hidden="true" />
                 </button>
               </div>
             </div>
@@ -65,5 +65,5 @@ export const Notification = ({
         </div>
       </Transition>
     </div>
-  );
-};
+  )
+}
